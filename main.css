@@ -1,0 +1,385 @@
+/********************************
+		Universal Selector
+*********************************/
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+/********************************
+	    Background & Header
+*********************************/
+
+.headerpic {
+	width: 100%;
+	height: 770px;
+	position: relative;
+	background-image: url("images/woodfull.png");
+	display: block;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-position: 0% -15%; 
+	overflow: hidden;
+}
+
+.headerpic img {
+	padding-left: 43%;
+	padding-top: 575px;
+	height: 100px;
+	width: auto;
+}
+
+.top h1 {
+	font-family: 'Playball', cursive;
+	font-size: 108px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 215px;
+	font-weight: bold;
+	color: #DD8B22;
+	text-shadow: 5px 5px 5px #000;
+}
+
+.top h3 {
+	font-family: 'Playball', cursive;
+	font-size: 90px;
+	width: 100%;
+	top: 333px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	color: #DD8B22;
+	text-shadow: 5px 5px 5px #000;
+}
+
+.mainMenu {
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	background-color: rgba(221, 139, 34, 0.82);
+	display: block;
+	z-index: 1;
+	margin-bottom: 70px;
+}
+
+/* Sticky Header */
+
+.fixed {  
+    position: fixed;     
+    top: 0;      
+    width: 100%;  
+    left: 0;    
+    z-index: 100;  
+    border-top: 0;
+    box-shadow: 0 4px 7px #000;
+}  
+
+.mainMenu h2 {
+	position: absolute;
+	float: left;
+	color: #ffffff;
+	font-family: 'Playball', cursive;
+	font-size: 28px;
+	top: 22px;
+	left: 20px;
+	font-weight: 400;
+}
+
+.mainMenu ul {
+	float: right;
+	color: black;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 16px;
+	right: 5px;
+	position: absolute;
+	top: 27px;
+}
+
+.mainMenu li {
+	display: inline;
+	padding: 9px;
+	vertical-align: middle;
+	font-size: 13px;
+}
+
+/*************************************
+			CSS Effects
+**************************************/
+
+@-webkit-keyframes push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/********************************************
+	Header & List Items & Section Headers
+**********************************************/
+
+a:link, #logo img:link, #aboutme img:link {
+	color: #FFFFFF;
+	text-decoration: none;
+	display: inline-block;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+a:visited, #logo img:visited, #aboutme img:visited { 
+	color: #FFFFFF; 
+	text-decoration: none;
+	display: inline-block;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+a:hover, #logo img:hover, #aboutme img:hover { 
+	color: #ffffff; 
+	text-decoration: none;
+	-webkit-animation-name: push;
+	animation-name: push;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+a:active, #logo img:active, #aboutme img { 
+	color: #FFFFFF; 
+	text-decoration: none;
+	display: inline-block;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+/* Social Icons & Logo */
+
+.mainMenu li img {
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+}
+
+#logo img {
+	height: auto;
+	width: 58px;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+#logo li {
+	font-size: 13px;
+	font-family: 'Alegreya Sans', sans-serif;
+	color: white;
+}
+
+/***************************************
+			About Me Section
+****************************************/
+
+#aboutme {
+	height: 680px;
+	margin-top: -16px;
+	background-color: #F7DFD9;
+}
+
+#aboutme img {
+	border-radius: 100%;
+	height: 300px;
+	width: auto;
+	margin: 0 auto;
+	padding: 60px;
+	display: flex;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+#aboutme p {
+	word-spacing: 10px;
+	font-size: 25px;
+	font-family: 'Alegreya Sans', sans-serif;
+	text-align: center;
+	font-weight: 300;
+}
+
+#aboutme_header {
+	font-family: 'Playball', cursive;
+	text-align: center;
+	font-size: 56px;
+	margin-top: -9px;
+	padding-bottom: 45px;
+	/*font-family: 'Lato';*/
+	font-weight: 400;
+}
+
+hr {
+	width: 33%;
+	border: 2px solid black;
+	margin: 0 auto 35px;
+}
+
+/***************************************
+			Portfolio Section
+****************************************/
+
+#portfolio {
+	height: 705px;
+	margin-top: -16px;
+	background-color: rgba(224, 205, 196, 0.87);
+}
+
+#portfolio p {
+	word-spacing: 10px;
+	font-size: 25px;
+	font-family: 'Alegreya Sans', sans-serif;
+	text-align: center;
+	font-weight: 300;
+}
+
+#portfolio_header {
+	font-family: 'Playball', cursive;
+	text-align: center;
+	font-size: 56px;
+	margin-top: 15px;
+	padding-top: 31px;
+	padding-bottom: 26px;
+	font-weight: 400;
+}
+
+hr {
+	width: 33%;
+	border: 2px solid black;
+	margin: 0 auto 35px;
+}
+
+.item {
+	position: relative;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.item li {
+	display: inline-block;
+}
+
+.img-wrap { 
+	width: 275px;
+	position: relative;
+	overflow: hidden; 
+}
+
+.img-wrap img {
+	width: 205px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.img-wrap p { 
+	word-spacing: 5px;
+	text-align: center;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 15px;
+	margin-bottom: 30px;
+	color: black;
+	font-weight: 500;
+}
+
+/***************************************
+		  Get In Touch Section 
+****************************************/
+
+#contact_me {
+	height: 489px;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#contact_header {
+	font-family: 'Playball', cursive;
+	text-align: center;
+	font-size: 56px;
+	margin-top: 22px;
+	padding-top: 31px;
+	padding-bottom: 26px;
+	font-weight: 400;
+}
+
+#primary {
+	vertical-align: middle;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	color: #595959;
+	font-size: 1.6em;
+	line-height: 1.8;
+	text-align: center;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 49%;
+}
+
+#get_icons ul img {
+	height: 50px;
+	width: 50px;
+	display: block;
+	margin-right: 9px;
+	padding-left: 28px;
+}
+
+#get_icons {
+	padding-left: 405px;
+	padding-top: 17px;
+}
+
+/***************************************
+			Footer Section
+****************************************/
+
+footer {
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	background-color: rgba(221, 139, 34, 0.82);
+	display: block;
+	z-index: 1;
+	margin-bottom: 70px;
+}
+
+footer p {
+	text-align: center;
+	font-size: 20px;
+	color: #ffffff;
+	font-family: 'Alegreya Sans', sans-serif;
+	padding-top: 27px;
+	font-weight: 500;
+}
+
+
