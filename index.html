@@ -9,12 +9,43 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="responsive.css">
 	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			  function filterPath(string) {
+			  return string
+			    .replace(/^\//,'')
+			    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+			    .replace(/\/$/,'');
+			  }
+			  var locationPath = filterPath(location.pathname);
+			  $('a[href*=#]').each(function() {
+			    var thisPath = filterPath(this.pathname) || locationPath;
+			    if (  locationPath == thisPath
+			    && (location.hostname == this.hostname || !this.hostname)
+			    && this.hash.replace(/#/,'') ) {
+			      var $target = $(this.hash), target = this.hash;
+			      if (target) {
+			        var targetOffset = $target.offset().top;
+			        $(this).click(function(event) {
+			          event.preventDefault();
+			          $('html, body').animate({scrollTop: targetOffset}, 400, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+});
+	</script>
 </head>
 <body>	
 
 	<div class="top" id="top">
 		<div class="headerpic">
-			<img src="images/downarrow.png">
+			
 		</div>
 			<h1>Eric Washington</h1>
 			<h3>Web Developer &amp Designer</h3>
